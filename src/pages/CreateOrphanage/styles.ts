@@ -40,6 +40,12 @@ export const Content = styled.main`
         padding-bottom: 24px;
       }
     }
+    
+    .leaflet-container {
+      margin-bottom: 40px;
+      border: 1px solid #d3e2e5;
+      border-radius: 20px;
+    }
   }
 `;
 
@@ -87,17 +93,35 @@ export const InputBlock = styled.div`
   }
 `;
 
-export const NewImageButton = styled.button`
-  display: flex;
-  align-items:center;
-  justify-content:center;
+export const ImagesContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 
-  width: 100%;
-  height: 64px;
+  > img {
+    width: 100%;
+    height: 96px;
+    background: #F5F8FA;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+`;
+
+export const NewImageButton = styled.label`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 96px;
   background: #F5F8FA;
   border: 1px dashed #96D2F0;
   border-radius: 20px;
   cursor: pointer;
+
+  input[type="file"]{
+    width: 0;
+    height: 0;
+  }
 `;
 
 export const SelectContainer = styled.div`
