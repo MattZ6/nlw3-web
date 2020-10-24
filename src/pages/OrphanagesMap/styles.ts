@@ -71,3 +71,5 @@ export const Link = styled(RouterLink)`
     background: ${({ theme }) => theme.colors.primaryLight};
   }
 `;
+
+export const OrphanageLink = styled(RouterLink)``;
