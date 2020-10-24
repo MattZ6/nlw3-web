@@ -39,7 +39,7 @@ interface ImageButtonProps {
 }
 
 export const ImageButton = styled.button<ImageButtonProps>`
-  border: 0;
+  border: 1px solid #eee;
   height: 88px;
   background: none;
   cursor: pointer;
@@ -137,6 +137,12 @@ export const OpenDetails = styled.div<OpenDetailsProps>`
     background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
     border: 1px solid #A1E9C5;
     color: #37C77F;
+  `}
+  
+  ${props => props.type === 'closed' && css`
+    background: linear-gradient(154.16deg, #fdf0f5 7.85%, #FFFFFF 91.03%);
+    border: 1px solid #ffbcd4;
+    color: #ff669d;
   `}
 
   > svg {
